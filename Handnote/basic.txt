@@ -1,0 +1,11 @@
+1. npm init vue@latest
+cd <your-project-name>
+> npm install
+> npm run dev
+
+Using Vue from CDN
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+
+2. 
