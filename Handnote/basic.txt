@@ -8,4 +8,52 @@ Using Vue from CDN
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
 
-2. 
+2. For vue binding data show in json format
+
+ {{ JSON.stringify(formValues, null, 2) }}
+
+#from
+<select class="form-control" v-model="formValues.district">
+
+# script	
+
+ data() {
+    return {
+      formValues: {
+        name: "",
+        email: "",
+        district: "",
+        gender: "",
+
+      },
+    };
+  },
+
+methods: {
+    onSubmit(event) {
+        event.preventDefault();
+
+        alert(JSON.stringify(this.formValues, null, 8));
+
+        console.log(this.formValues)
+        
+    },
+  },
+       
+
+
+3. Template Layouts other vue file import register this file  components: { Header }
+
+<script>
+
+import Header from "./layouts/Header.vue";
+
+export default {
+  components: { Header },  // register
+};
+</script>
+
+<template>
+  <Header />
+
+</template>
