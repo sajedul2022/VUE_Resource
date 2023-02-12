@@ -1,0 +1,7 @@
+	#paginate 
+
+https://vuejsexamples.com/vue-awesome-paginate-a-modern-and-powerfull-vue-js-pagination-library-with-a-large-set-of-various-pagination-components/
+
+1. npm i vue-awesome-paginate
+
+2. 

@@ -1,24 +1,39 @@
-import { createApp } from 'vue'
-import router from './router'
+import { createApp } from "vue";
+import { createRouter, createWebHistory } from 'vue-router'
+import App from "./App.vue"
+import Home from "./pages/Home.vue"
+import About from "./pages/About.vue"
+import Contact from "./pages/Contact.vue"
+import News from "./pages/News.vue"
+import Products from "./pages/Products.vue"
+import Search from "./pages/Search.vue"
 
-import App from './App.vue'
-// import App from './App1.vue'
-// import App from './Reactivity.vue'
-// import App from './Reactivity1.vue'
-// import App from './Reactivity2.vue'
-// import App from './Computed1.vue'
-// import App from './Computed2.vue'
-// import App from './Toggolebtn.vue'
-// import App from './Conditional.vue'
-// import App from './ListRendering.vue'
-// import App from './Event1.vue'
-// import App from './Event2.vue'
-// import App from './Form1.vue'
+// import the package
+import VueAwesomePaginate from "vue-awesome-paginate";
 
-// import './assets/main.css'
+// import the necessary css file
+import "vue-awesome-paginate/dist/style.css";
 
-const app = createApp(App)
 
-app.use(router)
 
-app.mount('#app')
+
+
+const routes = [
+    { path: '/', component: Home },
+    { path: '/about', component: About },
+    { path: '/contact', component: Contact },
+    { path: '/news', component: News },
+    { path: '/products', component: Products },
+    { path: '/search', component: Search },
+  ];
+
+  
+  const router = createRouter({
+    history: createWebHistory(),
+    routes,
+    linkActiveClass: "active"
+  })
+  
+// createApp(App).use(VueAwesomePaginate).mount("#app");
+createApp(App).use(router, VueAwesomePaginate).mount('#app')
+  

@@ -1,0 +1,48 @@
+				# router vue	
+
+https://www.geeksforgeeks.org/how-to-use-routing-in-vue-js/?ref=gcse
+
+1. npm install vue-router 
+
+2. main.js
+
+import { createApp } from "vue";
+import { createRouter, createWebHistory } from 'vue-router'
+
+import Home from "./pages/Home.vue";
+import About from "./pages/About.vue";
+import App from "./App.vue";
+
+
+
+const routes = [
+    { path: '/', component: Home },
+    { path: '/about', component: About },
+  ];
+
+  
+  const router = createRouter({
+    history: createWebHistory(),
+    routes,
+linkActiveClass: "active"
+  })
+  
+ 
+createApp(App).use(router).mount('#app')
+  
+
+
+3. App.vue src\App.vue	
+
+	 <router-view/>
+
+
+4. nav.vue
+
+      <router-link to="/">Home</router-link> 
+      <router-link to="/about">About</router-link>
+      
+
+
+
+   
