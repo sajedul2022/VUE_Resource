@@ -2,34 +2,36 @@
   <div class="container mt-5">
     <h2 style="text-align: center">Products</h2>
     <div class="row">
-
       <div class="col-md-12">
         <h2>Search</h2>
-            <form v-on:submit.prevent="search" >
-                <input type="text" v-model="searchItem" placeholder="Search.." >
-                <button type="submit" >Search</button>
-            </form>
-            <p>{{searchItem}}</p>
+        <form v-on:submit.prevent="search">
+          <input type="text" v-model="searchItem" placeholder="Search.." />
+          <button type="submit">Search</button>
+        </form>
+        <p>
+          " {{ searchItem }} " - Total: {{ searchResult.length }} results found.
+        </p>
       </div>
-
     </div>
     <hr />
     <div class="row">
       <div class="col-md-12">
-        <h2>Search</h2>
+        <h2>Search Results</h2>
       </div>
       <div class="col-md-10">
-        <div v-for="(product, index) in products" :key="product.index">
-          <div class="col-sm-8">
-            <h2>ID: {{ product.id }}</h2>
-            <h3>{{ product.product_name }}</h3>
+        <ol>
+          <li v-for="(search, index) in searchResult" :key="search.id">
+            <div class="col-sm-8">
+              <h5>ID: {{ search.id }}</h5>
+              <h5>Name: {{ search.product_name }}</h5>
 
-            <p>
-              {{ product.product_details }}
-            </p>
-            <hr />
-          </div>
-        </div>
+              <p>
+                Details: {{ search.product_details }}
+              </p>
+              <hr />
+            </div>
+          </li>
+        </ol>
       </div>
     </div>
   </div>
@@ -43,21 +45,21 @@ export default {
     return {
       products: [],
       searchItem: "",
-      searchResult: "",
-
+      searchResult: [],
     };
   },
   methods: {
-
-    search(){
-        axios.post("http://127.0.0.1:8000/api/search/",{
-            item: this.searchItem
+    search() {
+      axios
+        .post("http://127.0.0.1:8000/api/search/", {
+          item: this.searchItem,
         })
         .then((response) => {
-            // this.products = response.data;
-            console.log(response.data);
-    });
-    }
+          // this.products = response.data;
+          this.searchResult = response.data;
+          console.log(response.data);
+        });
+    },
   },
 
   mounted() {
