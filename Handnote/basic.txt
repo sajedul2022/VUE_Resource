@@ -57,3 +57,7 @@ export default {
   <Header />
 
 </template>
+
+
+*** json 
+	{{ JSON.stringify(formValues, null, 2) }}
