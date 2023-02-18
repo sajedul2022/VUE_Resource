@@ -24,6 +24,9 @@
         <li class="nav-item">
           <router-link class="nav-link" to="/search">Search</router-link>
         </li>
+        <li class="nav-item">
+          <router-link class="nav-link" to="/cart">Cart</router-link>
+        </li>
         
       </ul>
     </div>
