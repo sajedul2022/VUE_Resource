@@ -1,12 +1,14 @@
 ## vue auth
 
 1. composer require laravel/ui
+1.1 php artisan ui vue
 2. php artisan ui vue --auth
 3. npm install
 4. npm run dev
+5. npm run dev
+
 
 ** vue latest
-
 npm install vue
 npm install vue-loader --save-dev
 npm install vue-template-loader --save-dev
