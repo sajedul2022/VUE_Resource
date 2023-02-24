@@ -1,0 +1,31 @@
+
+1. AddToCart.vue
+
+<script >
+ props: ['prId'],
+
+  methods: {
+    addProductToCart() {
+      alert("Product ID " + this.prId);
+    },
+  },
+
+</script>
+
+ <template>
+  <div>
+    <li>
+      <a href="#" @click="addProductToCart"  > <i class="fa fa-shopping-cart"></i></a>
+    </li>
+  </div>
+</template>
+
+2.  show page
+
+<script setup>
+import axios from "axios";
+import addToCart from '../components/AddToCart.vue';
+</script>
+
+
+	<add-to-cart :pr-id="product.id" > </add-to-cart>
