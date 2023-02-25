@@ -1,0 +1,116 @@
+
+1. composer create-project laravel/laravel wdpf51_laravel8_vue3
+2. composer require laravel/ui
+3. php artisan ui vue
+4. php artisan ui vue --auth
+5.npm install
+6. npm run dev
+7. npm run dev
+8. npm i vue-router
+9. php artisan make:model Product -mcr
+
+10. php artisan make:seeder ProductSeeder
+
+    for ($i = 0; $i <= 100; $i++) {
+
+            $price = rand(100, 200);
+            $cat = rand(1, 5);
+            $stock = rand(1, 5);
+
+            DB::table('products')->insert([
+                'category_id' => $cat,
+                'product_name' => Str::random(15),
+                'price' => $price,
+                'image' => 'assets/images/no_photo.jpg',
+                'product_stock' => $stock,
+                'created_at' => date('Y-m-d h:i:s'),
+                'updated_at' => date('Y-m-d h:i:s'),
+
+            ]);
+        }
+
+11. databaseSeeder
+    $this->call(ProductSeeder::class);
+
+
+12. php artisan make:model Cart -mcr
+
+     /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+         $id = $request->prid;
+         $product = Product::find($id);
+
+         $data = [
+            'product_id' => $id,
+            'quantity' => 1,
+            'price' => $product->price,
+            'user_id' => 1,
+
+         ];
+         Cart::create($data);
+         return "Insert";
+        //  return $data;
+
+
+
+    }
+    
+
+13. 
+
+    // axios.post("api/cart", { prid: this.prId})
+      // .then((response) =>{
+      //   alert(response.data);
+      // })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## vue auth
+
+1. composer require laravel/ui
+1.1 php artisan ui vue
+2. php artisan ui vue --auth
+3. npm install
+4. npm run dev
+5. npm run dev
+
+
+** vue latest
+
+npm install vue
+npm install vue-loader --save-dev
+npm install vue-template-loader --save-dev
+npm run dev
+
+
+======== frontend =============
+1. php artisan make:controller FrontendController
