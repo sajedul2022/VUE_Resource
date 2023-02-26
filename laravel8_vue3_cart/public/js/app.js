@@ -23428,7 +23428,7 @@ var __default__ = {
     return {
       cartItems: [],
       subTotal: 0,
-      discount: 0,
+      discount: 10,
       Total: 0
     };
   },
@@ -23846,7 +23846,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       type: "text",
       value: item.quantity
     }, null, 8 /* PROPS */, _hoisted_13)])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(item.price * item.quantity), 1 /* TEXT */), _hoisted_15]);
-  }), 128 /* KEYED_FRAGMENT */))])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [_hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Subtotal "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, " $ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.subTotal), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Total "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "$" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.Total), 1 /* TEXT */)])]), _hoisted_22])])])])])]);
+  }), 128 /* KEYED_FRAGMENT */))])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [_hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Subtotal "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, " $ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.subTotal), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Discount "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, " $ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.discount), 1 /* TEXT */)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Total "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, "$" + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($data.Total), 1 /* TEXT */)])]), _hoisted_22])])])])])]);
 }
 
 /***/ }),

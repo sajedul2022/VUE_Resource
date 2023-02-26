@@ -77,6 +77,7 @@
               <h5>Cart Total</h5>
               <ul>
                 <li>Subtotal <span> $ {{subTotal}}</span></li>
+                <li>Discount <span> $ {{discount}}</span></li>
                 <li>Total <span>${{Total}}</span></li>
               </ul>
               <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
@@ -95,7 +96,7 @@ export default {
         return {
             cartItems: [],
             subTotal: 0,
-            discount: 0,
+            discount: 10,
             Total : 0,
         }
     },
